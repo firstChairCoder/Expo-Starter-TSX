@@ -24,24 +24,24 @@ import {
 } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
 
-export default function Navigation({
-  colorScheme
-}: {
-  colorScheme: ColorSchemeName;
-}) {
-  return (
-    <NavigationContainer
-      linking={LinkingConfiguration}
-      theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
-    >
-      <RootNavigator />
-    </NavigationContainer>
-  );
-}
+// export default function RootNavigation({
+//   colorScheme
+// }: {
+//   colorScheme: ColorSchemeName;
+// }) {
+//   return (
+//     <NavigationContainer
+//       linking={LinkingConfiguration}
+//       theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+//     >
+//       <RootNavigator />
+//     </NavigationContainer>
+//   );
+// }
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-function RootNavigator() {
+export default function RootNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen
